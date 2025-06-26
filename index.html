@@ -1,17 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Your Business Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #317692;
+      --white: #ffffff;
+      --text-on-white: #317692;
+      --text-on-primary: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--white);
+      color: var(--text-on-white);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      padding: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text-on-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px;
+      background: var(--white);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h1, h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    p, li {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background-color: var(--primary);
+      color: var(--text-on-primary);
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #265a6c;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: var(--text-on-primary);
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      section {
+        padding: 25px;
+        margin: 20px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
-  <p>This is the homepage content.</p>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section data-aos="fade-up">
+    <h1>Welcome to Your Business</h1>
+    <p>Your trusted partner in [industry]. Delivering excellence and value.</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Key service 1</li>
+      <li>Key service 2</li>
+      <li>Key service 3</li>
+    </ul>
+    <a href="services.html" class="btn">Explore Services</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
