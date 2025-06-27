@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Your Business</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
     :root {
       --primary: #317692;
@@ -15,92 +18,119 @@
       --text-on-white: #317692;
       --text-on-primary: #ffffff;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: var(--white);
+      background: var(--white);
       color: var(--text-on-white);
     }
+
     header {
-      background-color: var(--primary);
+      background: var(--primary);
+      color: var(--text-on-primary);
       padding: 20px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: var(--text-on-primary);
     }
+
     .logo {
       font-size: 1.5rem;
-      font-weight: bold;
+      font-weight: 700;
     }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 30px;
     }
+
     nav a {
       color: var(--text-on-primary);
       text-decoration: none;
       font-weight: 500;
     }
-    .section {
-      padding: 80px 20px;
+
+    .contact-section {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
       text-align: center;
-    }
-    .section h2 {
-      font-size: 2.5rem;
       color: var(--primary);
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
+
     form {
-      max-width: 600px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
     }
+
     input, textarea {
-      padding: 15px;
-      border: 2px solid var(--primary);
-      border-radius: 8px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       font-size: 1rem;
     }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #255a6e;
-    }
+
     button {
-      padding: 15px;
+      padding: 12px;
       background-color: var(--primary);
-      color: var(--text-on-primary);
+      color: var(--white);
       border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: bold;
+      border-radius: 6px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-weight: 600;
     }
+
     button:hover {
-      background-color: #255a6e;
+      background-color: #255a6d;
     }
+
     .contact-info {
-      margin-top: 60px;
       text-align: center;
-    }
-    .contact-info p {
-      margin: 10px 0;
+      margin-top: 40px;
+      color: var(--primary);
       font-size: 1rem;
     }
+
+    .contact-info i {
+      margin-right: 8px;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: var(--primary);
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #1c4c59;
+    }
+
     footer {
       background: var(--primary);
       color: var(--white);
-      padding: 30px;
+      padding: 20px;
       text-align: center;
-      margin-top: 80px;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -108,40 +138,40 @@
   <header>
     <div class="logo">YourLogo</div>
     <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="section">
-    <h2 data-aos="fade-up">Get in Touch</h2>
-    <form action="#" method="POST" data-aos="fade-up" data-aos-delay="200">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <div class="contact-info" data-aos="fade-up" data-aos-delay="400">
-      <p>Email: contact@yourbusiness.com</p>
-      <p>Phone: +91-9876543210</p>
-      <p>Address: Sector 62, Noida, Uttar Pradesh, India</p>
-      <p>Follow us on social media</p>
+
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> Email: contact@yourbusiness.com</p>
+      <p><i class="fas fa-phone"></i> Phone: +91-9876543210</p>
+      <p><i class="fas fa-map-marker-alt"></i> Address: Sector 62, Noida, Uttar Pradesh, India</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Your Business. All rights reserved.</p>
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
