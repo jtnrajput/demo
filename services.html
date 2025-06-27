@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Your Business Name</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Your Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     :root {
       --primary: #317692;
@@ -14,137 +15,132 @@
       --text-on-white: #317692;
       --text-on-primary: #ffffff;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--white);
       color: var(--text-on-white);
-      line-height: 1.6;
     }
-
     header {
       background-color: var(--primary);
-      padding: 20px 0;
-    }
-
-    nav ul {
-      list-style: none;
+      padding: 20px 60px;
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-on-primary);
     }
-
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
     nav a {
       color: var(--text-on-primary);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
-
-    nav a:hover {
-      text-decoration: underline;
+    .section {
+      padding: 80px 20px;
+      text-align: center;
     }
-
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 40px;
-      background: var(--white);
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    h1, h2 {
+    .section h2 {
+      font-size: 2.5rem;
       color: var(--primary);
+      margin-bottom: 30px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .service {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .service:hover {
+      transform: translateY(-10px);
+    }
+    .service img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
       margin-bottom: 20px;
     }
-
-    p, li {
+    .service h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
       margin-bottom: 10px;
     }
-
-    ul {
-      padding-left: 20px;
+    .service p {
+      font-size: 1rem;
     }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 28px;
-      background-color: var(--primary);
-      color: var(--text-on-primary);
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #265a6c;
-    }
-
     footer {
-      background-color: var(--primary);
-      color: var(--text-on-primary);
+      background: var(--primary);
+      color: var(--white);
+      padding: 30px;
       text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-      }
-
-      section {
-        padding: 25px;
-        margin: 20px;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
+      margin-top: 80px;
     }
   </style>
 </head>
 <body>
-
   <header>
+    <div class="logo">YourLogo</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
   </header>
 
-  <section data-aos="fade-up">
-    <h1>Our Services</h1>
-    <h2>Service 1</h2>
-    <p>Description of service 1 and how it helps customers.</p>
-    <h2>Service 2</h2>
-    <p>Description of service 2 and its benefits.</p>
-    <h2>Service 3</h2>
-    <p>Description of service 3 and its value.</p>
+  <section class="section">
+    <h2 data-aos="fade-up">Our Services</h2>
+    <div class="services">
+      <div class="service" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://source.unsplash.com/400x300/?architecture,interior" alt="Service 1">
+        <h3>Interior Design</h3>
+        <p>We craft modern, functional interiors tailored to your vision and lifestyle.</p>
+      </div>
+      <div class="service" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://source.unsplash.com/400x300/?construction,blueprint" alt="Service 2">
+        <h3>Architecture Planning</h3>
+        <p>Comprehensive design and planning services for commercial and residential spaces.</p>
+      </div>
+      <div class="service" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://source.unsplash.com/400x300/?furniture,interior" alt="Service 3">
+        <h3>Custom Furniture</h3>
+        <p>Hand-crafted pieces that match your space’s aesthetics and purpose.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
+    <p>&copy; 2025 Your Business. All rights reserved.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

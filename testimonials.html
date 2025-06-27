@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testimonials | Your Business Name</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Testimonials | Your Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
     :root {
       --primary: #317692;
@@ -14,130 +15,132 @@
       --text-on-white: #317692;
       --text-on-primary: #ffffff;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--white);
       color: var(--text-on-white);
-      line-height: 1.6;
     }
-
     header {
       background-color: var(--primary);
-      padding: 20px 0;
-    }
-
-    nav ul {
-      list-style: none;
+      padding: 20px 60px;
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-on-primary);
     }
-
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
     nav a {
       color: var(--text-on-primary);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
-
-    nav a:hover {
-      text-decoration: underline;
+    .section {
+      padding: 80px 20px;
+      text-align: center;
     }
-
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 40px;
-      background: var(--white);
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    h1, h2 {
+    .section h2 {
+      font-size: 2.5rem;
       color: var(--primary);
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
-
-    p {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .testimonial {
+      background: #f0f0f0;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .testimonial:hover {
+      transform: translateY(-10px);
+    }
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
       margin-bottom: 15px;
     }
-
-    .testimonial {
-      border-left: 4px solid var(--primary);
-      padding-left: 20px;
-      margin-bottom: 30px;
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 6px;
+    .testimonial h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin: 10px 0 5px;
     }
-
+    .testimonial p {
+      font-size: 0.95rem;
+    }
     footer {
-      background-color: var(--primary);
-      color: var(--text-on-primary);
+      background: var(--primary);
+      color: var(--white);
+      padding: 30px;
       text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-      }
-
-      section {
-        padding: 25px;
-        margin: 20px;
-      }
+      margin-top: 80px;
     }
   </style>
 </head>
 <body>
-
   <header>
+    <div class="logo">YourLogo</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
   </header>
 
-  <section data-aos="fade-up">
-    <h1>Client Testimonials</h1>
-
-    <div class="testimonial">
-      <h2>John Doe</h2>
-      <p>"Working with this team was a fantastic experience. They delivered more than we expected and always on time!"</p>
+  <section class="section">
+    <h2 data-aos="fade-up">What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 1">
+        <h3>Priya Sharma</h3>
+        <p>"Working with this team was a delight. The quality and creativity were beyond our expectations."</p>
+      </div>
+      <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Client 2">
+        <h3>Rohit Verma</h3>
+        <p>"Amazing service! They truly transformed our space with great attention to detail and style."</p>
+      </div>
+      <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Client 3">
+        <h3>Neha Mehta</h3>
+        <p>"Professional, innovative and reliable. Highly recommended for all interior and architectural needs."</p>
+      </div>
     </div>
-
-    <div class="testimonial">
-      <h2>Jane Smith</h2>
-      <p>"Absolutely professional and creative. Our sales increased by 40% in just 2 months! Highly recommend."</p>
-    </div>
-
-    <div class="testimonial">
-      <h2>Michael Lee</h2>
-      <p>"Top-notch support and strategy. They really care about their clients and deliver results that matter."</p>
-    </div>
-
   </section>
 
   <footer>
-    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
+    <p>&copy; 2025 Your Business. All rights reserved.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
